@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="/css/photoswipe.css">
   <link rel="stylesheet" href="/css/default-skin/default-skin.css"> 
   
+
   
 </head>
 <body>
@@ -31,8 +32,11 @@
 
 
 <li th:each="imageGallery, hh : ${images}">
+ 
 <img th:src="@{${'/image/display/'+ imageGallery.id}}" 
-                class="card img-fluid" style="width:300px" alt=""/>
+                class="card img-fluid" alt=""/>
+
+<!--<ul th:text="${imageGallery.id}"></ul> -->
 </li>
 
 
@@ -69,14 +73,10 @@
     </table>
          -->
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-	<script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap.min.js"></script>
-	<script src="/js/photoswipe.min.js"></script> 
-	<script src="/js/photoswipe-ui-default.js"></script> 
-	<script src="/js/action.js"></script> 
+
 	
 	
+	<div class="pswp_root">
 <!-- Root element of PhotoSwipe. Must have class pswp. -->
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
@@ -143,13 +143,16 @@
     </div>
 
 </div>
+</div>
 	
-	<script type="text/javascript" th:src="@{/js/action.js}"> 
-	
+  <script type="text/javascript" src="https://mc.yandex.ru/metrika/watch.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap.min.js"></script>
+	<script src="/js/photoswipe.js"></script> 
+	<script src="/js/photoswipe-ui-default.js"></script> 
 
-
-	</script>
-	
+<script src="/js/action.js"></script> 
 	
 </body>
 </html>
